@@ -21,4 +21,5 @@ agent{label 'linux'}
 				}
 			}
     		}
+	}
 }
