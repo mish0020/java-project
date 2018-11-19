@@ -5,6 +5,7 @@ agent{label 'linux'}
 		stage('Test'){
 			steps{
 				sh 'ant -f test.xml -v'
+				sh 'junit reports/*.xml'
 			}
 		}	
     }
