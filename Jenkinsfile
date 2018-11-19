@@ -7,4 +7,3 @@ node('linux'){
 		sh "env"
 	}
 }
-
