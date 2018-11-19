@@ -1,9 +1,11 @@
-properties([pipelineTriggers([githubPush()])])
+pipeline{
 
-node('linux'){
-    git url: 'https://github.com/mish0020/java-project.git',
-	branch : 'master'
-	stage('Test'){
-		sh "env"
-	}
+agent{label 'linux'}
+    stages{
+		stage('Test'){
+			steps{
+				sh 'ant -f test.xml -v'
+			}
+		}	
+    }
 }
